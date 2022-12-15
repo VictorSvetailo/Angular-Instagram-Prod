@@ -23,4 +23,13 @@ export class AppComponent {
       this.isAppLoading = false
     }, 2000)
   }
+
+  //Event binding
+  text = ''
+  changeTitleH() {
+    this.appTitle = 'IT-INC'
+  }
+  changeTextH(event: Event) {
+    this.text = (event.currentTarget as HTMLInputElement).value
+  }
 }

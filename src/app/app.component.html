@@ -13,5 +13,21 @@
     <h1>{{ appTitle }}</h1>
     <div>{{ user.name }}: {{ user.age }}</div>
     <button [disabled]="isAppLoading">add</button>
+
+    <div>
+      <br />
+      <button (click)="changeTitleH()">Change title</button>
+    </div>
+    <hr />
+    <div>
+      <div>
+        <h1>{{ text }}</h1>
+      </div>
+      <div>
+        <!-- <input type="text" (input)="changeTextH($event)" />-->
+        <!-- <input type="text" (keyup)="changeTextH($event)" />-->
+        <!-- <input type="text" (keyup.enter)="changeTextH($event)" />-->
+      </div>
+    </div>
   </body>
 </html>
