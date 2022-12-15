@@ -26,8 +26,16 @@
       <div>
         <!-- <input type="text" (input)="changeTextH($event)" />-->
         <!-- <input type="text" (keyup)="changeTextH($event)" />-->
-        <!-- <input type="text" (keyup.enter)="changeTextH($event)" />-->
+        <input type="text" (keyup.enter)="changeTextH($event)" />
       </div>
     </div>
+    <hr />
+    <h1>{{ textTwoWayBinding }}</h1>
+    <div>
+      <input type="text" (keyup)="changeTextTwoWayBindingH($event)" [value]="textTwoWayBinding" />
+    </div>
+    <hr />
+    <h1>{{ textFormsModuleH }}</h1>
+    <input type="text" [(ngModel)]="textFormsModuleH" />
   </body>
 </html>

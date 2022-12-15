@@ -26,10 +26,16 @@ export class AppComponent {
 
   //Event binding
   text = ''
+  textTwoWayBinding = 'Hello'
+  textFormsModuleH = 'FormsModule Text'
   changeTitleH() {
     this.appTitle = 'IT-INC'
   }
   changeTextH(event: Event) {
     this.text = (event.currentTarget as HTMLInputElement).value
+  }
+  //Two way binding
+  changeTextTwoWayBindingH(event: Event) {
+    this.textTwoWayBinding = (event.currentTarget as HTMLInputElement).value
   }
 }
