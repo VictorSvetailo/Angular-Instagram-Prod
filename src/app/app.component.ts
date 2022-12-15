@@ -16,4 +16,11 @@ export class AppComponent {
     age: 32,
     name: 'Ivan',
   }
+  isAppLoading = true
+
+  constructor() {
+    setTimeout(() => {
+      this.isAppLoading = false
+    }, 2000)
+  }
 }
