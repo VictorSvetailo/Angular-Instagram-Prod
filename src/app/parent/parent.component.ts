@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Grade} from './child/child.component';
 
 
 export interface Address {
@@ -22,7 +23,9 @@ export class ParentComponent {
     house: 49,
   }
   math?: number
-  getGrade(value: number){
-   this.math = value
+  physic?: number
+  getGrade(value: Grade){
+   this.math = value.math
+   this.physic = value.physic
   }
 }
