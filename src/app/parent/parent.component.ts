@@ -21,4 +21,8 @@ export class ParentComponent {
     street: 'Platonova',
     house: 49,
   }
+  math?: number
+  getGrade(value: number){
+   this.math = value
+  }
 }

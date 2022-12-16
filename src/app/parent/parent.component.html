@@ -1,4 +1,5 @@
 <div>
   <h1>parent works! {{name}} {{lastName}} from {{address.city}} {{address.street}} {{address.house}}</h1>
-  <inst-child [lastName]="lastName" [address]="address"></inst-child>
+  <inst-child (sendGradeEvent)="getGrade($event)" [lastName]="lastName" [address]="address"></inst-child>
+  <h2>math: {{math}}</h2>
 </div>

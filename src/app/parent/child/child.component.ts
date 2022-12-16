@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Address} from '../parent.component';
 
 @Component({
@@ -7,8 +7,15 @@ import {Address} from '../parent.component';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent {
-  name = "Victor"
+  name = 'Victor'
   // aliasing
   @Input('lastName') lastNameProps?: string
   @Input() address?: Address
+
+  @Output() sendGradeEvent = new EventEmitter<number>()
+
+  sendGradeH() {
+    const math = 5
+    this.sendGradeEvent.emit(math)
+  }
 }
