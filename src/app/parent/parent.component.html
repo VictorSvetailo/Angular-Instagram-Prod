@@ -1,11 +1,10 @@
 <div>
   <div>
-    <h1 *ngIf="isLoading; else elseBlock">Loading...</h1>
+    <h1 *ngIf="isLoading">Loading...</h1>
   </div>
 
-<!--  <div *ngIf="!isLoading">-->
-  <ng-template #elseBlock>
-    <div *ngIf="!isLoading">
+
+    <ng-container *ngIf="!isLoading">
       <h1>parent works!</h1>
       <inst-child (sendGradeEvent)="getGrade($event)"></inst-child>
 
@@ -19,7 +18,6 @@
 
       <h2>Всего: </h2>
       <h2>physic: </h2>
-    </div>
-  </ng-template>
+    </ng-container>
 
 </div>
