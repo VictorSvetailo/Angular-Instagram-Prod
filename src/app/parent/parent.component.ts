@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {Grade} from './child/child.component';
 
 export interface WeekGrades {
   id: number
@@ -42,6 +41,14 @@ export class ParentComponent {
 
   getGrade(garde: string) {
     // this.grades.push(garde)
+  }
+  //
+
+  isLoading = true
+  constructor() {
+    setTimeout(()=>{
+      this.isLoading = false
+    }, 3000)
   }
 
 

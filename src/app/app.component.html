@@ -10,33 +10,35 @@
     <title>Angular App</title>
   </head>
   <body>
-    <h1>{{ appTitle }}</h1>
-    <div>{{ user.name }}: {{ user.age }}</div>
-    <button [disabled]="isAppLoading">add</button>
+  <div>
+<!--    <h1>{{ appTitle }}</h1>-->
+<!--    <div>{{ user.name }}: {{ user.age }}</div>-->
+<!--    <button [disabled]="isAppLoading">add</button>-->
 
-    <div>
-      <br />
-      <button (click)="changeTitleH()">Change title</button>
-    </div>
-    <hr />
-    <div>
-      <div>
-        <h1>{{ text }}</h1>
-      </div>
-      <div>
-        <!-- <input type="text" (input)="changeTextH($event)" />-->
-        <!-- <input type="text" (keyup)="changeTextH($event)" />-->
-        <input type="text" (keyup.enter)="changeTextH($event)" />
-      </div>
-    </div>
-    <hr />
-    <h1>{{ textTwoWayBinding }}</h1>
-    <div>
-      <input type="text" (keyup)="changeTextTwoWayBindingH($event)" [value]="textTwoWayBinding" />
-    </div>
-    <hr />
-    <h1>{{ textFormsModuleH }}</h1>
-    <input type="text" [(ngModel)]="textFormsModuleH" />
-  <inst-parent></inst-parent>
+<!--    <div>-->
+<!--      <br />-->
+<!--      <button (click)="changeTitleH()">Change title</button>-->
+<!--    </div>-->
+<!--    <hr />-->
+<!--    <div>-->
+<!--      <div>-->
+<!--        <h1>{{ text }}</h1>-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        &lt;!&ndash; <input type="text" (input)="changeTextH($event)" />&ndash;&gt;-->
+<!--        &lt;!&ndash; <input type="text" (keyup)="changeTextH($event)" />&ndash;&gt;-->
+<!--        <input type="text" (keyup.enter)="changeTextH($event)" />-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <hr />-->
+<!--    <h1>{{ textTwoWayBinding }}</h1>-->
+<!--    <div>-->
+<!--      <input type="text" (keyup)="changeTextTwoWayBindingH($event)" [value]="textTwoWayBinding" />-->
+<!--    </div>-->
+<!--    <hr />-->
+<!--    <h1>{{ textFormsModuleH }}</h1>-->
+<!--    <input type="text" [(ngModel)]="textFormsModuleH" />-->
+    <inst-parent></inst-parent>
+  </div>
   </body>
 </html>
