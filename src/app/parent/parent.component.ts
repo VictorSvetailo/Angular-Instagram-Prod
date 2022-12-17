@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Grade} from './child/child.component';
 
 
@@ -15,17 +15,10 @@ export interface Address {
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent {
-  name = "Ivan"
-  lastName = 'Petrov'
-  address: Address = {
-    city: 'Minsk',
-    street: 'Platonova',
-    house: 49,
+  grades: string[] = ['math: 5', 'english: 3']
+  getGrade(garde: string) {
+    this.grades.push(garde)
   }
-  math?: number
-  physic?: number
-  getGrade(value: Grade){
-   this.math = value.math
-   this.physic = value.physic
-  }
+
+
 }

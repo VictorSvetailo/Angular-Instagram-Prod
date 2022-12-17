@@ -13,16 +13,12 @@ export interface Grade {
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent {
-  name = 'Victor'
-  // aliasing
-  @Input('lastName') lastNameProps?: string
-  @Input() address?: Address
+  @Output() sendGradeEvent = new EventEmitter<string>()
 
-  @Output() sendGradeEvent = new EventEmitter<Grade>()
-
+  inputGrade = ''
   sendGradeH() {
-    const math = 5
-    const physic = 4
-    this.sendGradeEvent.emit({math, physic})
+    this.sendGradeEvent.emit(this.inputGrade)
   }
+
+
 }

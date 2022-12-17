@@ -1,6 +1,6 @@
 <div>
-  <h1>parent works! {{name}} {{lastName}} from {{address.city}} {{address.street}} {{address.house}}</h1>
-  <inst-child (sendGradeEvent)="getGrade($event)" [lastName]="lastName" [address]="address"></inst-child>
-  <h2>math: {{math}}</h2>
-  <h2>physic: {{physic}}</h2>
+  <h1>parent works!</h1>
+  <inst-child (sendGradeEvent)="getGrade($event)"></inst-child>
+  <h2>lesson: {{grades | json}}</h2>
+  <h2>physic: </h2>
 </div>
