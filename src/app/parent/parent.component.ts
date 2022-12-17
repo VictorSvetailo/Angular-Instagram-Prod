@@ -42,14 +42,18 @@ export class ParentComponent {
   getGrade(garde: string) {
     // this.grades.push(garde)
   }
+
   //
 
-  isLoading = true
+  isLoading = false
+
   constructor() {
-    setTimeout(()=>{
+    setTimeout(() => {
       this.isLoading = false
     }, 3000)
   }
 
+
+  value = '4'
 
 }

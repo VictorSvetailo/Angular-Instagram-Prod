@@ -2,7 +2,12 @@
   <div>
     <h1 *ngIf="isLoading">Loading...</h1>
   </div>
-
+  <div [ngSwitch]="value">
+    <div *ngSwitchCase="'1'">One</div>
+    <div *ngSwitchCase="'2'">Two</div>
+    <div *ngSwitchCase="'3'">Three</div>
+    <div *ngSwitchDefault style="color: red">Unknown number</div>
+  </div>
 
     <ng-container *ngIf="!isLoading">
       <h1>parent works!</h1>
