@@ -2,8 +2,15 @@
   <h1>parent works!</h1>
   <inst-child (sendGradeEvent)="getGrade($event)"></inst-child>
 
-  <h2 *ngFor="let el of grades;
-   index as i; count as count; even as even">{{i}} - lesson: {{el}} - {{count}} - {{even}}</h2>
+<!--  <h2 *ngFor="let el of grades; index as i; count as count; even as even">{{i}} - lesson: {{el}} - {{count}} - {{even}}</h2>-->
+ <div *ngFor="let lesson of lessons">
+   <div>
+     Lesson - {{lesson.title}}
+     <span *ngFor="let grade of lesson.weekGrades">{{grade.gradeItem}}</span>
+   </div>
+ </div>
+
+
   <h2>Всего: </h2>
   <h2>physic: </h2>
 </div>

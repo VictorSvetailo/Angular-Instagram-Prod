@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Address} from '../parent.component';
 
 
 export interface Grade {
