@@ -1,0 +1,8 @@
+
+<div class="back">
+  <p class="default success">ng-class works!</p>
+<!--  <p [ngClass]="'default success'">ng-class works!</p>-->
+<!--  <p [ngClass]="{default: true, success: isSuccess, error: !isSuccess}">ng-class works!</p>-->
+  <p [ngClass]="{error: isSuccess, 'default class2 class3' : !isSuccess}">ng-class works!</p>
+</div>
+
